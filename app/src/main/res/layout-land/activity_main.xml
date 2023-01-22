@@ -9,68 +9,58 @@
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
-        android:layout_height="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" >
+        tools:layout_editor_absoluteY="1dp">
 
         <EditText
             android:id="@+id/textSurahNumber"
-            android:layout_width="339dp"
-            android:layout_height="62dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="40dp"
+            android:layout_width="324dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
             android:ems="10"
             android:hint="Enter surah number"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@android:color/white"
-            />
+            android:textColor="@android:color/white"/>
 
         <EditText
             android:id="@+id/textVerseNumber"
-            android:layout_width="337dp"
-            android:layout_height="74dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="10dp"
+            android:layout_width="324dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
             android:ems="10"
             android:hint="Enter Verse number"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/gitLink"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textSurahNumber"
+            app:layout_constraintHorizontal_bias="0.835"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textSurahNumber"
-            android:textColor="@android:color/white"
-            />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@android:color/white"/>
 
         <Button
             android:id="@+id/btnVerseFinder"
             android:layout_width="324dp"
             android:layout_height="64dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:text="display Verse Arabic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.514"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gitLink"
-            android:background="@drawable/pngwing2"
-            android:textColor="@android:color/white"
-            />
+            app:layout_constraintEnd_toStartOf="@+id/gitLink"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textVerseNumber"
+            app:layout_constraintTop_toBottomOf="@+id/textVerseNumber"
+            android:background="@drawable/pngwing2"/>
 
         <TextView
             android:id="@+id/textViewVerseArabic"
-            android:layout_width="323dp"
+            android:layout_width="478dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/noorehuda_regular"
             android:isScrollContainer="false"
             android:nestedScrollingEnabled="false"
@@ -80,23 +70,21 @@
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.553"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnVerseFinder"
+            app:layout_constraintVertical_bias="1.0"
             android:textColor="@android:color/white"/>
 
         <Button
             android:id="@+id/gitLink"
             android:layout_width="324dp"
             android:layout_height="64dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
             android:text="Link to Git"
-            app:layout_constraintBottom_toTopOf="@+id/btnVerseFinder"
-            app:layout_constraintEnd_toEndOf="@+id/textVerseNumber"
-            app:layout_constraintStart_toStartOf="@+id/textVerseNumber"
-            app:layout_constraintTop_toBottomOf="@+id/textVerseNumber"
+            app:layout_constraintEnd_toEndOf="@+id/textSurahNumber"
+            app:layout_constraintTop_toBottomOf="@+id/textSurahNumber"
             android:background="@drawable/pngwing2"
-            android:textColor="@android:color/white"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
